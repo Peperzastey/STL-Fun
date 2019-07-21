@@ -3,3 +3,6 @@
 
 # vscode editor config
 .vscode
+
+# compile commands for clangd/clang-tidy
+compile_commands.json

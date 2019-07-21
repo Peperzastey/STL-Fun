@@ -4,12 +4,10 @@ find_package(Threads REQUIRED)
 
 # header-only library
 add_library(sleepSort INTERFACE)
-#TODO target_sources() + HEADER_FILE_ONLY property on source file
-# target_sources(sleepSort
-#     INTERFACE
-#         # ${SRC_FILES}
-#         #${CMAKE_CURRENT_SOURCE_DIR}/sleepSort.hpp
-# )
+target_sources(sleepSort
+    INTERFACE
+        ${CMAKE_CURRENT_SOURCE_DIR}/sleepSort.hpp
+)
 target_include_directories(sleepSort
     INTERFACE
         ${CMAKE_CURRENT_SOURCE_DIR}
