@@ -8,7 +8,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
 set(CLANG_TIDY_CHECKS
-    "-checks=clang-analyzer-*,cppcoreguidelines-*,modernize-*,readability-*,performance-*,,misc-*,bugprone-*,cert-*"
+    "-checks=clang-diagnostic-*,clang-analyzer-*,cppcoreguidelines-*,modernize-*,readability-*,performance-*,,misc-*,bugprone-*,cert-*"
     CACHE STRING "Default clang-tidy checks for this project"
 )
 
@@ -37,3 +37,6 @@ if(CMAKE_VERSION VERSION_GREATER 3.6)
 endif()
 
 add_subdirectory(sleepSort)
+if(BUILD_TESTING)
+    add_subdirectory(stl-algorithms)
+endif()

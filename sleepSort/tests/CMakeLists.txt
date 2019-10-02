@@ -27,4 +27,7 @@ if(CLANG_TIDY_EXE)
     )
 endif()
 
-add_test(sleepSortTest sleepSortTest)
+add_test(NAME SleepSortTest
+    COMMAND sleepSortTest
+    WORKING_DIRECTORY $<TARGET_FILE_DIR:sleepSortTest>
+)

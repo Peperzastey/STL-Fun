@@ -2,6 +2,7 @@
 #include <array>
 #include <iostream>
 
+//TODO use gtest
 int main()
 {
     {
